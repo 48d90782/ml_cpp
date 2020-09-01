@@ -2,6 +2,8 @@
 #include <cstdlib>
 #include <torch/torch.h>
 #include <iostream>
+#include <opencv2/opencv.hpp>
+#include "mnist.h"
 
 int main() {
     torch::Tensor tensor = torch::eye(3);
