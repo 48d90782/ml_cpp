@@ -4,6 +4,7 @@ project(ml_cpp LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 20)
 find_package(OpenCV REQUIRED)
 
+message("cuDNN version 8.0.3 with CUDA 11")
 set(CUDNN_LIBRARY_PATH ${CMAKE_SOURCE_DIR}/external/cudnn/cuda/lib64/libcudnn.so)
 set(CUDNN_INCLUDE_PATH ${CMAKE_SOURCE_DIR}/external/cudnn/cuda/include/)
 
@@ -11,6 +12,7 @@ include(${CMAKE_SOURCE_DIR}/external/libtorch/share/cmake/Torch/TorchConfig.cmak
 include_directories(${OpenCV_INCLUDE_DIRS})
 list(APPEND CMAKE_PREFIX_PATH ${CMAKE_SOURCE_DIR}/external/libtorch)
 
+message("libTorch version 1.6.0")
 find_package(Torch REQUIRED)
 
 file(GLOB _src src/*.cpp src/*.h include/*.h)
