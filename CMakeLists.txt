@@ -3,6 +3,7 @@ project(ml_cpp LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 find_package(OpenCV REQUIRED)
+find_package(Qt5 COMPONENTS Widgets)
 
 message("cuDNN version 8.0.3 with CUDA 11")
 set(CUDNN_LIBRARY_PATH ${CMAKE_SOURCE_DIR}/external/cudnn/cuda/lib64/libcudnn.so)

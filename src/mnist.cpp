@@ -11,3 +11,11 @@ torch::data::Example<> MNISTDataset::get(size_t index) {
 torch::optional<size_t> MNISTDataset::size() const {
     return torch::optional<size_t>();
 }
+
+void MNISTDataset::ReadLabels(const std::string &labels_file_name) {
+
+}
+
+void MNISTDataset::ReadImages(const std::string &images_file_name) {
+
+}
